@@ -1,0 +1,481 @@
+:root{
+    --lg-text:2rem;
+    --lg-icons:1em;
+    --main-color:rgb(229, 229, 0);
+}
+
+html{
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.span{
+  text-decoration:'underline';
+  text-decoration-color:"rgb(199, 222, 20)";
+}
+
+
+
+.container1{
+    height: 85%;
+    width: 90%;
+    margin: auto;
+    border-radius: .42em;
+    background-color: rgb(123, 123, 123);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+/* Nav Bar */
+
+.yes{
+    margin: auto;
+    /* width: max-content; */
+    background-color: rgba(0, 0, 0, 0.322);
+    display: flex;
+    flex-direction: column;
+    padding: .2em;
+    color: #000000;
+    font-size: clamp(1em,1vw,2em);
+    border-radius: .2em;
+  }
+  
+  .nav-icon{
+   margin: 3em;
+   color: #000000;
+  }
+
+  /* Home */
+
+  .home{
+    width: 100%;
+    height:100%;
+    background-color: rgb(49, 49, 49);
+    display: flex;
+    flex-direction: row;
+  }
+
+.name{
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    /* font-size: clamp(1em,1vw,10em); */
+    width: 60%;
+    margin-top: 10%;
+    height: 100%;
+    padding: 0 0rem 0 1rem;
+}
+
+.name h1{
+    font-size: clamp(3rem,5vw,6rem);
+}
+
+.name h5{
+  font-size: clamp(1rem,2vw,3rem); ;
+  background-color: rgb(205, 205, 10);
+  padding: .2rem;
+  color: #000000;
+}
+
+.name p{
+  font-size: clamp(1rem,1vw,1.8rem);
+}
+
+.cv{
+  border: none;
+  display: flex;
+}
+.cv button{
+  border: none;
+  background-color: transparent;
+ color: #fff;
+ border-bottom: 1px solid yellow;
+ margin: 1em 0 0 0;
+ cursor: pointer;
+ padding: 1rem;
+}
+
+.sidebar {
+  width:1.5%;
+  height: 100%;
+  writing-mode: vertical-lr ;
+  background-color: rgb(146, 146, 146);
+  display: flex;
+}
+.sidebar h3{
+  color: #fff;
+  margin-top: auto;
+  margin-left: 0%;
+  margin-bottom: 1%;
+}
+
+/* Social media icons */
+
+  .social-media{
+    width: 5%;
+    /* font-size: clamp(100%,1vw,10em); */
+    height: 100%;
+    color: #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+  }
+
+  .icons{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 1em;
+    font-size: clamp(1.5em,1vw,3em);
+    flex-direction: column;
+    color: grey;
+    align-items: center;
+    row-gap: 1em;
+  }
+
+  .icons a{
+    color: grey;
+    transition: .6s;
+  }
+
+  .icons a:hover{
+    color: var(--main-color);
+  }
+
+  .image{
+    width: 40%;
+    height:100%;
+    background-color: rgb(89, 89, 89);
+    background-image: url("../images/image.png");
+    background-position: center center;
+    background-size: cover;
+
+  }
+
+  /* Scrollbar design */
+::-webkit-scrollbar {
+    width: .2em;
+  }
+  
+::-webkit-scrollbar-track {
+    background-color: rgb(49, 49, 49);
+    border-radius: 100px;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: #787878;
+    border-radius: 100px;
+  }
+
+
+
+
+
+  /* About Me */
+
+  .about{
+    width: 100%;
+    height: 100%;
+    background-color: #313131;
+    display: flex;
+    padding: 1em;
+    flex-direction: column;  
+  }
+
+  .txtHead{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .textHead h2{
+    font-size: clamp(2em,2vw,7em);
+  }
+
+  .txtHead p{
+    font-size: 1em;
+  }
+ 
+  .skill{
+    height: 90%;
+    width: 100%;
+    margin: 0%;
+    padding: none;
+  }
+  .skillRow{
+    padding: 3rem;
+  }
+  .skillRow Col{
+    height: 2rem;
+    width: 3em;
+  }
+
+.card1{
+  display: flex;
+  align-items: center;
+  background-color: rgb(64, 64, 64);
+  flex-direction: column;
+  padding: 1em;
+  height:30rem;
+  line-height: 2;
+  margin: clamp(.2em,1.5vw,1em);
+  border-radius: clamp(.2em,1.5vw,1em);
+} 
+.expicon{
+  font-size: clamp(2rem,3vw,8rem);
+  color:rgb(229, 229, 0);
+}
+
+.card1 h2{
+  color: #fff;
+  font-size: clamp(1.6em,1.5vw,4em);
+}
+
+.card1 p{
+  line-height: 1.5;
+  color: aliceblue;
+  font-size: clamp(.8em,1.3vw,1.4em);
+}
+.Coll{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width:760px) {
+  .card1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(64, 64, 64);
+    flex-direction: column;
+    padding: .5em;
+    height: max-content;
+    width: 15em;
+    margin: clamp(.2em,1.5vw,1em);
+    border-radius: clamp(.2em,1.5vw,1em);
+  } 
+  .about{
+    width: 100%;
+    height: max-content;
+    background-color: #313131;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: scroll;
+  }
+  .coll{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* skills */
+  .real-skill{
+    height: max-content;
+    width:100%;
+    overflow: scroll;
+    padding: 1em;
+    background-color: #303030;
+  }
+
+  /* form */
+  .emailForm{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    font-size: clamp(1.7em,1vw,1.7em);
+    line-height: 2;
+    padding-bottom: 8vh;
+  }
+  
+  .emailForm input{
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    margin: 1em;
+    background-color: transparent;
+    width: 50%;
+    caret-color: var(--main-color);
+  }
+
+  /* links */
+  .links{
+    width: 100%;
+    height: max-content;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+
+
+/* Skillsss */
+
+.real-skill{
+  height: 100%;
+  width:100%;
+  padding: 1em;
+  background-color: #303030;
+}
+
+.real-contain{
+  height: 50%;
+  width: 100%;
+  margin: 0%;
+  padding: none;
+}
+.real-row{
+
+  color: white;
+}
+.skilltest{
+  margin: 3em;
+  height: 3em;
+}
+
+.skilltest label{
+  font-size:clamp(.9em,1vw,2em);
+}
+
+.progress-ba{
+ width: 100%;
+ height: 13%;
+ border-radius: 3rem;
+ background-color: #414141;
+} 
+
+.progress-per{
+  height: 100%;
+  border-radius: 3rem;
+  background-color: var(--main-color);
+}
+
+.exinfo{
+  height: 40%;
+  color: aliceblue;
+  padding: 0 2em 0 2em;
+  text-align: center;
+}
+
+/* Contact Page */
+
+.contactMe{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 2%;
+  background-color: #414141;
+  flex-direction: column;
+}
+
+.contact{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form{
+  width: 100%;
+  height: 100%;
+  display: flex
+}
+
+.emailForm{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  line-height: 2;
+  font-size: clamp(1em,1vw,1.7em);
+}
+
+.emailForm input{
+  border: none;
+  border-bottom: 1px solid var(--main-color);
+  margin: 1em;
+  background-color: transparent;
+  width: 100%;
+  font-size: clamp(1em,1vw,1.7em);
+  caret-color: var(--main-color);
+}
+
+.sub{
+  width: fit-content;
+  display: flex;
+  margin: auto;
+  background-color: var(--main-color);
+  height: fit-content;
+  border-radius: 1em;
+}
+
+
+
+.emailForm input::placeholder{
+  color: #8d8d8d;
+  font-size: clamp(1em,2vw,1.4em);
+}
+
+.emailForm input:focus{
+  outline: none;
+}
+
+.leftContact{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.leftContact h2{
+  color: #fff;
+}
+
+/* links */
+
+.links{
+  width: 100%;
+  height: 100%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.links h2{
+  color: #fff;
+}
+
+.links button{
+  width: 40%;
+  display: block;
+  /* align-content: center;
+  justify-content: space-around; */
+  background-color: rgb(88, 88, 88);
+  height: 20%;
+  border: none;
+  margin: 1em;
+  border-radius: 1em;
+  font-size: clamp(1.5em,2vh,3em);
+}
+
+.link button FaWhatsapp{
+  color: #e4e4e4;
+}

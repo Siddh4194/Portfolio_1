@@ -1,0 +1,158 @@
+/* Social media icons */
+:root{
+    --lg-text:1rem;
+    --lg-icons:1.8em;
+    --main-color:rgb(229, 229, 0);
+}
+
+    .home-mobile{
+        width: 100%;
+        height:100%;
+        background: rgb(0,0,0);
+    background: linear-gradient(196deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 19%, rgba(0,0,0,0.9894082633053222) 35%, rgba(1,1,1,1) 52%, rgba(31,31,31,0.9754026610644257) 66%, rgba(31,31,31,0.9698004201680672) 81%, rgba(31,31,31,0.9417892156862745) 100%);
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+      }
+    
+    /* home page mobile */
+    
+    .cv-mobile{
+        height: max-content;
+        /* display: flex;
+        align-self: flex-end; */
+    }
+    
+    .cv-mobile button{
+        background-color: var(--main-color);
+        color: #000000;
+        border: 1px solid var(--main-color);
+        padding: .2em;
+        border-radius:.4em 0 0 .4em;
+        margin: 0 0 0 0;
+    }
+    #roundone{
+        border: none;
+        background-color: transparent;
+        color: #ffffff;
+        border: 1px solid var(--main-color);
+        padding: .2em .5em;
+        border-radius: 0 .4em .4em 0;
+        margin: 0 0 0 0;
+    }
+    .image-mobile{
+      width: 100%;
+      height:50%;
+      background-color: rgb(89, 89, 89);
+      background-image: url("../images/image.png");
+      background-position:unset center;
+      background-size: cover;
+  
+    }
+    
+    
+    .social-mobile{
+        width: max-content;
+        /* font-size: clamp(100%,1vw,10em); */
+        height: max-content;
+        color: #e4e4e4;
+        display: flex;
+      }
+    
+      .icons-mobile{
+        display: flex;
+        font-size: var(--lg-icons);
+        flex-direction: row;
+        column-gap: .4em;
+        margin-top: 1em;
+      }
+    
+    
+    
+      :root{
+        --lg-text:1rem;
+        --lg-icons:1.8em;
+    }
+    
+    
+    
+    
+    .container1{
+        height: 85%;
+        width: 90%;
+        margin: auto;
+        border-radius: .42em;
+        background-color: rgb(123, 123, 123);
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    
+    
+    /* Nav Bar */
+    
+    .yes{
+        text-align: center;
+        margin: auto;
+        width: max-content;
+        background-color: rgba(199, 222, 20, 0.616);
+        display: flex;
+        flex-direction: column;
+        padding: .2em;
+        border-radius: .2em;
+      }
+      
+      .nav-icon{
+       margin: .5em;
+      }
+    
+     
+    
+    .name-mobile{
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+        width: 100%;
+        word-wrap: break-word;
+        padding: 3em 1em 1em 1em;
+        /* font-size: clamp(1em,1vw,10em); */
+       
+    }
+
+    /* Main Name */
+    
+    .name-mobile h1{
+        font-size: clamp(4em,2vw,5em);
+        color: rgb(255, 255, 255);
+    }
+    .name-mobile h5{
+      font-size: clamp(1.5em,2vw,5em);
+        color:black;
+        background-color: yellow;
+    }
+    
+    .name-mobile p{
+        /* font-size: var(--lg-text); */
+        color: #ffffff;
+    }
+    
+
+    
+      /* Scrollbar design */
+    ::-webkit-scrollbar {
+        width: .2em;
+      }
+      
+    ::-webkit-scrollbar-track {
+        background-color: none;
+        border-radius: 100px;
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        background-color: #787878;
+        border-radius: 100px;
+      }
+    
+
+
+ /* Home */
+
+ 

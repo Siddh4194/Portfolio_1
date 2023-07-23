@@ -4,9 +4,20 @@ import './mobile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaFacebook,FaTwitter,FaInstagram, FaLinkedinIn} from 'react-icons/fa';
 import { GifTwoTone, GitHub, GiteRounded, GiteSharp } from "@mui/icons-material";
-
+import Resume from "../Document/Resume.pdf";
 
 export default function Home(props){
+    const onButtonClick = () => {
+        fetch(Resume).then((response) => {
+          response.blob().then((blob) => {
+            const fileURL = window.URL.createObjectURL(blob);
+            let alink = document.createElement("a");
+            alink.href = fileURL;
+            alink.download = Resume;
+            alink.click();
+          });
+        });
+      };
    if (props.scWidth <= 600) {
     return(
         <div id="home" className="home-mobile">
@@ -18,8 +29,9 @@ export default function Home(props){
                     <h5>I'm Developer</h5>
                     <p>My Name Is Siddhant Dhanaji Kadam.<br/>I am  <span style={{textDecoration:'underline', textDecorationColor:"rgb(199, 222, 20)"}}>Full Stack Developer</span><br/> & Enthusiastic for Web Design. Coding Is Daily Food.</p>
                     <div className="cv-mobile">
-                <a href="../Document/siddhant kadam(Full Stack Developer).pdf" download>
+                <a href={Resume} download="Resume">
                     <button>Download Cv</button>
+                    <button onClick={onButtonClick}>click me</button>
                 </a>
                     <button id="roundone">Talk</button>
                 </div>

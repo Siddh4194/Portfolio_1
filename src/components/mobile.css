@@ -19,11 +19,16 @@
     
     .cv-mobile{
         height: max-content;
-        /* display: flex;
-        align-self: flex-end; */
+        display: flex;
+    }
+
+    #roundone button{
+      border: none;
+      color: #fff;
+      background-color: transparent;
     }
     
-    .cv-mobile button{
+    #down{
         background-color: var(--main-color);
         color: #000000;
         border: 1px solid var(--main-color);
@@ -32,6 +37,16 @@
         margin: 0 0 0 0;
     }
     #roundone{
+      /* background-color: var(--main-color); */
+        color: #f3f3f3;
+        border: 1px solid var(--main-color);
+        padding: .2em;
+        border-radius:0 .4em .4em 0;
+        margin: 0 0 0 0;
+    }
+
+    
+    /* #roundone{
         border: none;
         background-color: transparent;
         color: #ffffff;
@@ -39,7 +54,7 @@
         padding: .2em .5em;
         border-radius: 0 .4em .4em 0;
         margin: 0 0 0 0;
-    }
+    } */
     .image-mobile{
       width: 100%;
       height:50%;
@@ -55,8 +70,9 @@
         width: max-content;
         /* font-size: clamp(100%,1vw,10em); */
         height: max-content;
-        color: #e4e4e4;
+        color: #949494;
         display: flex;
+        flex-direction: row;
       }
     
       .icons-mobile{
@@ -66,7 +82,9 @@
         column-gap: .4em;
         margin-top: 1em;
       }
-    
+    .icons-mobile a{
+      color:#949494;;
+    }
     
     
       :root{
@@ -127,6 +145,22 @@
       font-size: clamp(1.5em,2vw,5em);
         color:black;
         background-color: yellow;
+        
+  animation: blink 1s cubic-bezier(0.075, 0.82, 0.165, 1) 2s 1 normal;
+    }
+    @keyframes blink {
+      0%{
+        background-color: rgba(205, 205, 10, 0.148);
+      }
+      30%{
+        background-color: rgba(205, 205, 10, 0.735);
+      }
+      65%{
+        background-color: rgba(205, 205, 10, 0.502);
+      }
+      100%{
+        background-color: rgb(205, 205, 10);
+      }
     }
     
     .name-mobile p{

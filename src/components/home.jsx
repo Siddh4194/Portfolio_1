@@ -1,27 +1,28 @@
 import React from "react";
 import  '../images/image.jpg';
 import './mobile.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaFacebook,FaTwitter,FaInstagram, FaLinkedinIn} from 'react-icons/fa';
-import { GifTwoTone, GitHub, GiteRounded, GiteSharp } from "@mui/icons-material";
+import { FaFacebook,FaTwitter,FaInstagram, FaLinkedinIn, FaGithub} from 'react-icons/fa';
+import {GitHub} from "@mui/icons-material";
 import Resume from "../Document/Resume.pdf";
-
+import { NavLink } from "react-bootstrap";
 export default function Home(props){
-    const onButtonClick = () => {
-        fetch(Resume).then((response) => {
-          response.blob().then((blob) => {
-            const fileURL = window.URL.createObjectURL(blob);
-            let alink = document.createElement("a");
-            alink.href = fileURL;
-            alink.download = Resume;
-            alink.click();
-          });
-        });
-      };
+    // const onButtonClick = () => {
+    //     fetch(Resume).then((response) => {
+    //       response.blob().then((blob) => {
+    //         const fileURL = window.URL.createObjectURL(blob);
+    //         let alink = document.createElement("a");
+    //         alink.href = fileURL;
+    //         alink.download = Resume;
+    //         alink.click();
+    //       });
+    //     });
+    //   };
+    
+
    if (props.scWidth <= 600) {
     return(
+        
         <div id="home" className="home-mobile">
-            
             <div className="image-mobile">
             </div>
             <div className="name-mobile">
@@ -29,19 +30,18 @@ export default function Home(props){
                     <h5>I'm Developer</h5>
                     <p>My Name Is Siddhant Dhanaji Kadam.<br/>I am  <span style={{textDecoration:'underline', textDecorationColor:"rgb(199, 222, 20)"}}>Full Stack Developer</span><br/> & Enthusiastic for Web Design. Coding Is Daily Food.</p>
                     <div className="cv-mobile">
-                <a href={Resume} download="Resume">
-                    <button>Download Cv</button>
-                    <button onClick={onButtonClick}>click me</button>
-                </a>
-                    <button id="roundone">Talk</button>
+                    <a href={Resume} download="Resume">
+                        <button id="down">Download Cv</button>
+                    </a>
+                    <NavLink href="#contact" id="roundone"><button>Let's Talk</button></NavLink>
                 </div>
                     <div className="social-mobile">
                         <div className="icons-mobile">
-                            <FaFacebook href="https://www.facebook.com/siddhant.kadam.794/"/>
-                            <FaTwitter href="https://twitter.com/Siddhan08877951"/>
-                            <FaInstagram/>
-                            <FaLinkedinIn href="https://www.linkedin.com/in/siddhant-kadam-963977222/"/>
-                            <GitHub/>
+                            <a href="https://www.facebook.com/siddhant.kadam.564/"><FaFacebook/></a>
+                            <a href="https://twitter.com/Siddhan08877951"><FaTwitter/></a>
+                            <a href="https://www.instagram.com/sidd.d.kadam/"><FaInstagram/></a>
+                            <a href="https://github.com/Siddh4194/"><GitHub/></a>
+                            <a href="https://www.linkedin.com/in/siddhant-kadam-963977222/"><FaLinkedinIn/></a>
                         </div>
                     </div>
             </div>
@@ -53,10 +53,11 @@ export default function Home(props){
         <div id="home" className="home">
         <div className="social-media">
             <div className="icons">
-                <a href=""><FaFacebook/></a>
-                <a href=""><FaTwitter/></a>
-                <a href=""><FaInstagram/></a>
-                <a href=""><FaLinkedinIn/></a>
+                <a href="https://www.facebook.com/siddhant.kadam.564/"><FaFacebook/></a>
+                <a href="https://twitter.com/Siddhan08877951"><FaTwitter/></a>
+                <a href="https://www.instagram.com/sidd.d.kadam/"><FaInstagram/></a>
+                <a href="https://www.linkedin.com/in/siddhant-kadam-963977222/"><FaLinkedinIn/></a>
+                <a href="https://github.com/Siddh4194"><GitHub/></a>
             </div>
         </div>
             <div className="image">
@@ -69,7 +70,7 @@ export default function Home(props){
                 <a href="../Document/siddhant kadam(Full Stack Developer).pdf" download>
                     <button>Download Cv</button>
                 </a>
-                    <button type="button">Talk</button>
+                    <NavLink href="#contact"><button type="button">Let's Talk</button></NavLink>
                 </div>
             </div>
             <div className="sidebar">

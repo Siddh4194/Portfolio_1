@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import './container.css';
 import { Col, Row,Container } from "react-bootstrap";
-import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin} from "react-icons/fa";
+import { Mail } from "@mui/icons-material";
 function Contact(){
     var [formData,setFormData] = useState({
         name:'',subject:'',content:''
@@ -14,13 +15,24 @@ function Contact(){
     const handleChange = (event) =>{
         setFormData({...formData,[event.target.name]:event.target.value});
     };
+
+    const email = (event) =>{
+        event.preventDefault();
+            window.location.href = "https://mail.google.com/mail/";        
+    };
+
+    const linkin = (event) =>{
+        event.preventDefault();
+            window.location.href = "https://www.linkedin.com/in/siddhant-kadam-963977222/";        
+    };
     return(
         <div id="contact" className="contactMe">
             <div className="txtHead">
-                <h2>Contact Me</h2>
-                <p>For <span style={{textDecoration:'underline', textDecorationColor:"rgb(199, 222, 20)"}}>Hiring</span> And Buisness Purpose</p>
+            <h2>Contact Me</h2>
             </div>
             <div className="contact">
+            <p>For <span style={{textDecoration:'underline', textDecorationColor:"rgb(199, 222, 20)"}}>Hiring</span> And Buisness Purpose</p>
+                <div className="subcontact">
                 <Container>
                     <Row>
                         <Col xs={12} md={6} sm={12} className="leftContact">
@@ -37,12 +49,14 @@ function Contact(){
                         <Col xs={12} md={6} sm={12}>
                         <div className="links">
                             <h2>Let's Talk</h2>
-                            <button><FaWhatsapp/>WhatsApp</button>
-                            <button><FaLinkedin/>LinkedIn</button>
+                            <button onClick={email}><Mail/><h5>Email</h5></button>
+                            <button onClick={linkin}><FaLinkedin/><h5>LinkedIn</h5></button>
                         </div>
                         </Col>
                     </Row>
                 </Container>
+                </div>
+               
             </div>
         </div>
         
